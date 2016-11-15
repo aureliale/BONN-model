@@ -22,7 +22,7 @@ def main():
     
     parser = argparse.ArgumentParser(description='Running expriment (recurrent policy)')
     
-    parser.add_argument('--log', choices=["csv","console"], help="Save results to a file or print in console",required=True)
+    parser.add_argument('--log', choices=["csv","console"], help="Save results to a file or print in console",default='console')
     parser.add_argument('--directory', help="Directory where to save results")
     parser.add_argument('--filename', help="Name of the file to save results")
 
@@ -33,8 +33,8 @@ def main():
     parser.add_argument('--use_x', type=str, help="_")
     parser.add_argument('--num_hidden', type=int, help="number of hidden units")
     parser.add_argument('--nH', type=int, help="number of different discretes policies for model:D-BONN")
-    parser.add_argument('--representation', help="representation of x_data")
-    parser.add_argument('--representation_goal', help="representation of y_data")    
+    parser.add_argument('--representation_x', help="representation of x_data")
+    parser.add_argument('--representation_y', help="representation of y_data")    
     parser.add_argument('--gamma', type=float, help="Discount rate for reward",default=0.99)
     
     parser.add_argument('--lr', type=float, help="Learning rate for policy",required=True)
@@ -42,8 +42,8 @@ def main():
     parser.add_argument('--activation', choices=["tanh","sigmoid","softsign","relu","None","none"], help="activation to use in RNN cell",default="tanh")
     
     parser.add_argument('--lambd', type=float, help="(maximum) cost to observe y")
-    parser.add_argument('--exploration_epoch_min', type=int, help="when to begin to use a cost for y")
-    parser.add_argument('--exploration_epoch_nb', type=int, help="number of epoch to increase the cost to lambd")  
+    parser.add_argument('--exploration_epoch_min', type=int, help="when to begin to use a cost for y", default=0)
+    parser.add_argument('--exploration_epoch_nb', type=int, help="number of epoch to increase the cost to lambd", default=0)  
     
     parser.add_argument('--n_batch', type=int, help="Number of trajectories for one epoch",default=32)
     parser.add_argument('--iter_max', type=int, help="Maximum number of learning iteration",default=1000)

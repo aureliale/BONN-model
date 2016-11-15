@@ -39,7 +39,7 @@ class Model(object):
             
             #data representation
             data = tf.reshape(data, [-1, input_dim])
-            data = tools.representation(data, config.representation, is_training, scope="input_representation")
+            data = tools.representation_x(data, config.representation, is_training, scope="input_representation")
             data = tf.reshape(data, [-1, max_length, int(data.get_shape()[1])])    
             
             #recurrent network

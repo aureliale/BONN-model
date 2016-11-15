@@ -202,14 +202,14 @@ class Model(object):
                 y_data = tf.slice(self.input_data, [0,0,x_dim],[-1,-1,y_dim])
             
                 x_data = tf.reshape(x_data, [-1, x_dim])            
-                x_data = tools.representation(x_data, config.representation, is_training, scope="input_representation")
+                x_data = tools.representation(x_data, config.representation_x, is_training, scope="input_representation")
                 x_dim = int(x_data.get_shape()[1])
                 x_data = tf.reshape(x_data, [-1, max_length, x_dim]) 
             else:
                 y_data = self.input_data
             # y
             y_data = tf.reshape(y_data, [-1, y_dim])            
-            y_data = tools.representation(y_data, config.representation_goal, is_training, scope="instr_representation")
+            y_data = tools.representation(y_data, config.representation_y, is_training, scope="instr_representation")
             y_dim = int(y_data.get_shape()[1])
             y_data = tf.reshape(y_data, [-1, max_length, y_dim])                         
             # action
