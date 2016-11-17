@@ -1,8 +1,13 @@
-# BONN-model
+# Options discovery with Budgeted Reinforcement Learning
+(under review as a conference paper at ICLR 2017)
+
+Aurélia Léon, Ludovic Denoyer
 
 We consider the problem of learning hierarchical policies for Reinforcement Learning able to discover options, an option corresponding to a sub-policy over a set of primitive actions. Different models have been proposed during the last decade that usually rely on a predefined set of options. We specifically address the problem of automatically discovering options in decision processes. We describe a new RL learning framework called Bi-POMDP, and a new learning model called Budgeted Option Neural Network (BONN) able to discover options based on a budgeted learning objective. Since Bi-POMDP are more general than POMDP, our model can also be used to discover options for classical RL tasks. The BONN model is evaluated on different classical RL problems, demonstrating both quantitative and qualitative interesting results.
 
 ## Links
+
+[OpenReview](http://openreview.net/forum?id=H1eLE8qlx)
 
 ## Requirements
 
@@ -28,6 +33,7 @@ To run the recurrent policy gradient (with one GRU cell):
 ```
 python  run.py --env rooms2 --model GRUReinforce --num_hidden 5 --representation_x linear:5:relu  --lr 0.01
 ```
+
 
 ## Others parameters
 Here are all the parameters:
@@ -57,4 +63,4 @@ Here are all the parameters:
 --obs_each_n_trajs
 ```
 
-## License
+## Bibex
