@@ -62,5 +62,3 @@ Here are all the parameters:
 --nb_iter_for_obs 
 --obs_each_n_trajs
 ```
-
-## Bibex
