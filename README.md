@@ -1,13 +1,13 @@
-# Options discovery with Budgeted Reinforcement Learning
-(under review as a conference paper at ICLR 2017)
+# Budgeted Hierarchical Reinforcement Learning
+(IJCNN 2018)
 
 Aurélia Léon, Ludovic Denoyer
 
-We consider the problem of learning hierarchical policies for Reinforcement Learning able to discover options, an option corresponding to a sub-policy over a set of primitive actions. Different models have been proposed during the last decade that usually rely on a predefined set of options. We specifically address the problem of automatically discovering options in decision processes. We describe a new RL learning framework called Bi-POMDP, and a new learning model called Budgeted Option Neural Network (BONN) able to discover options based on a budgeted learning objective. Since Bi-POMDP are more general than POMDP, our model can also be used to discover options for classical RL tasks. The BONN model is evaluated on different classical RL problems, demonstrating both quantitative and qualitative interesting results.
+In hierarchical reinforcement learning, the framework of options models sub-policies over a set of primitive actions. In this paper, we address the problem of discovering and learning options from scratch. Inspired by recent works in cognitive science, our approach is based on a new budgeted learning approach in which options naturally arise as a way to minimize the cognitive effort of the agent. In our case, this effort corresponds to the amount of information acquired by the agent at each time step. We propose the Budgeted Hierarchical Neural Network model (BHNN), a hierarchical recurrent neural network architecture that learns latent options as continuous vectors. With respect to existing approaches, BHNN does not need to explicitly predefine sub-goals nor to a priori define the number of possible options. We evaluate this model on different classical RL problems showing the quality of the resulting learned policy.
 
 ## Links
 
-[OpenReview](http://openreview.net/forum?id=H1eLE8qlx)
+(http://www.smart-labex.fr/publications/pdf/5c1bde322f26c.pdf)
 
 ## Requirements
 
